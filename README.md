@@ -24,21 +24,6 @@ We aim to enhance realism by:
 - **📊 Quantitative Analysis**: Calculates **Normalized Energy Consumption** and **Work Savings (%)** relative to a no-wind baseline.
 
 ---
-
-## 🚀 Results
-You can extract various values of **distance**, **work consumption** and **work savings (%)**. Also, we can generate a figure showing the building domain, SP, DE, WPs, and the paths for Opt 1 and Opt 2, which allows for path comparison.
-
-<p align="center">
-  
-<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/0156737e-fe24-4696-844c-38c3e411eef1" />
-  
-  <br>
-  <em>
-    Fig 1. The computed paths for Scenario 1, Case 1.
-  </em>
-</p>
-
----
 ## 🛠️ Usage & Reproducibility
 
 This code is specifically configured for the **$Re=5000$** flow regime, corresponding to the experimental setup described in **Table III** of the paper.
@@ -66,6 +51,21 @@ STOPOVER_POS_1 = np.array([-1, 2.5])    # WP 1
 STOPOVER_POS_2 = np.array([-0.5, -2.5]) # WP 2
 STOPOVER_POS_3 = np.array([2.5, -2.5])  # WP 3
 ```
+---
+
+## 🚀 Results
+You can extract various values of **distance**, **work consumption** and **work savings (%)** for $Re=5000$. Also, we can generate a figure showing the building domain, SP, DE, WPs, and the paths for Opt 1 and Opt 2, which allows for path comparison. This is a visualization of Scenario 1, Case 1 introduced in the paper.
+
+<p align="center">
+<img width="800" height="100" alt="Image" src="https://github.com/user-attachments/assets/513fbd2f-bb4e-4038-b520-a78c0d74fb9f" />
+<img width="600" height="600" alt="Image" src="https://github.com/user-attachments/assets/0156737e-fe24-4696-844c-38c3e411eef1" />
+  
+  <br>
+  <em>
+    Fig 1. The computed paths for Scenario 1, Case 1.
+  </em>
+</p>
+
 ---
 
 ## 📂 Directory Structure
