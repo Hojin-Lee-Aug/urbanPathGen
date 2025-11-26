@@ -33,6 +33,8 @@ Place the downloaded NetCDF files into the `data/` directory. Ensure the filenam
 * `data/Info.Netcdf` (Geometry info)
 * `data/PV.Netcdf` (Velocity field for Re=5000)
 
+**Note:** If you wish to use different filenames or paths, you can modify the `info_file` and `pv_file` variables inside `main.py`.
+  
 ### 2. Configuration (Table III Scenarios)
 You can modify the **Start Point (SP)**, **Destination (DE)**, and **Waypoints (WPs)** in `main.py` to reproduce the scenarios from **Table III** or to run your own experiments.
 
