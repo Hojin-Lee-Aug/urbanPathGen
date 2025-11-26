@@ -53,7 +53,6 @@ STOPOVER_POS_3 = np.array([2.5, -2.5])  # WP 3
 ## 📂 Directory Structure
 
 ```bash
-urban/
 ├── data/               # Place NetCDF files here
 ├── src/                # Source codes
 │   ├── __init__.py
