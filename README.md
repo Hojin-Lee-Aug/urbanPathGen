@@ -24,6 +24,31 @@ We aim to enhance realism by:
 - **📊 Quantitative Analysis**: Calculates **Normalized Energy Consumption** and **Work Savings (%)** relative to a no-wind baseline.
 
 ---
+## 🛠️ Usage & Reproducibility
+
+This code is specifically configured for the **$Re=5000$** flow regime, corresponding to the experimental setup described in **Table III** of the paper.
+
+### 1. Data Setup
+Place the downloaded NetCDF files into the `data/` directory. Ensure the filenames match exactly:
+* `data/Info.Netcdf` (Geometry info)
+* `data/PV.Netcdf` (Velocity field for Re=5000)
+
+### 2. Configuration (Table III Scenarios)
+You can modify the **Start Point (SP)**, **Destination (DE)**, and **Waypoints (WPs)** in `main.py` to reproduce the scenarios from **Table III** or to run your own experiments.
+
+Open `main.py` and edit the following section:
+
+```python
+# ========================================
+# Configuration (Match with Table III)
+# ========================================
+START_POS = np.array([0.4, -1.6])   # SP
+GOAL_POS = np.array([2.5, 0.5])     # DE
+
+STOPOVER_POS_1 = np.array([-1, 2.5])    # WP 1
+STOPOVER_POS_2 = np.array([-0.5, -2.5]) # WP 2
+STOPOVER_POS_3 = np.array([2.5, -2.5])  # WP 3
+---
 
 ## 📂 Directory Structure
 
