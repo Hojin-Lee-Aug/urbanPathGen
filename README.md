@@ -21,7 +21,7 @@ We aim to enhance realism by:
 
 - **🌪️ GCNN-based Wind Prediction**: Utilizes Graph Neural Networks to predict complex wind fields around urban geometries (trained with LB simulation data).
 - **🔋 Energy-Efficient Pathfinding**: Implements a modified **Dijkstra algorithm** that considers aerodynamic drag ($F_d$) instead of just Euclidean distance.
-- **📊 Quantitative Analysis**: Calculates **Normalized Energy Consumption** and **Work Savings (%)** relative to a no-wind baseline.
+- **📊 Quantitative Analysis**: Calculates **Work Consumptions** and **Work Savings (%)** relative to a no-wind baseline.
 
 ---
 ## 🛠️ Usage & Reproducibility
