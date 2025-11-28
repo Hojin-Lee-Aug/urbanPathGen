@@ -84,11 +84,11 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 ├── gcnn/                          # Graph Convolutional Neural Network (GCNN) module
 │   ├── data_set/                  # Dataset directory for GCNN inference
 │   │   ├── adjLists/              # Graph connectivity data (Adjacency lists)
-│   │   │   └── adjLst_914.hdf5    # Adjacency list 
+│   │   │   └── adjLst_914.hdf5    # Adjacency list for sample ID 914
 │   │   ├── coords/                # Nodal coordinate data
-│   │   │   └── coord_914.hdf5     # Coordinates
+│   │   │   └── coord_914.hdf5     # Coordinates for sample ID 914
 │   │   └── samples/               # Template files for file generation
-│   │       └── PV_samplefile.Netcdf # Template container for PV data
+│   │       └── PV_samplefile.Netcdf # Template container for PV (velocity) data
 │   └── results/                   # Directory where GCNN prediction results will be saved
 │       └── README.txt             # Information about output files
 │
@@ -99,6 +99,6 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 │   ├── physics.py                 # Physics calculations (Drag, Reynolds number, Energy)
 │   └── visualization.py           # Plotting and visualization tools
 │
-├── .gitignore                    
-├── LICENSE
-└── README.md                  
+├── .gitignore                     # Specifies files to ignore in Git version control
+├── LICENSE                        # License information for the project
+└── README.md                      # Main project documentation and usage guide       
