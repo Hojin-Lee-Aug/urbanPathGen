@@ -89,7 +89,7 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 │   │   ├── coords/                # Nodal coordinate data
 │   │   │   └── coord_914.hdf5     # Coordinates 
 │   │   └── samples/               # Template files for file generation
-│   │       └── PV_samplefile.Netcdf # Template container for PV (velocity) data
+│   │       └── PV_samplefile.Netcdf # Template container for PV data
 │   └── results/                   # Directory where GCNN prediction results will be saved
 │       └── README.txt            
 │
@@ -97,7 +97,7 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 │   ├── __init__.py                # Package initialization file
 │   ├── environment.py             # Environment setup and boundary definitions
 │   ├── pathfinding.py             # Core pathfinding algorithms (e.g., Dijkstra)
-│   ├── physics.py                 # Physics calculations (Drag, Reynolds number, Energy)
+│   ├── physics.py                 # Physics calculations 
 │   └── visualization.py           # Plotting and visualization tools
 │
 ├── .gitignore                   
