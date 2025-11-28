@@ -79,8 +79,7 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 
 ├── data/                         
 │   ├── Info.Netcdf                # Grid and coordinate information file
-│   └── README.txt                 
-│
+│   └── README.txt            
 ├── gcnn/                         
 │   ├── data_set/                  
 │   │   ├── adjLists/              
@@ -91,14 +90,12 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 │   │       └── PV_samplefile.Netcdf # Template container for PV data
 │   └── results/                   
 │       └── README.txt           
-│
 ├── src/                           
 │   ├── __init__.py               
 │   ├── environment.py             # Environment setup and boundary definitions
 │   ├── pathfinding.py             # Core pathfinding algorithms (e.g., Dijkstra)
 │   ├── physics.py                 # Physics calculations
 │   └── visualization.py           # Plotting and visualization tools
-│
 ├── .gitignore                   
 ├── LICENSE                  
 └── README.md                    
