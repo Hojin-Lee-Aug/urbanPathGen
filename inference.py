@@ -19,9 +19,9 @@ BASE_PATH = "./"
 class Config:
     uref = 0.0057735
     target_id = '914' # Sample ID
-    data_dir = os.path.join(BASE_PATH, "data_set")
+    data_dir = os.path.join("./gcnn/", "data_set")
     checkpoint_path = os.path.join(BASE_PATH, "checkpoint_gcnn.pth.tar")
-    output_dir = os.path.join(BASE_PATH, "results")
+    output_dir = os.path.join("./gcnn/", "results")
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 args = Config()
@@ -116,12 +116,12 @@ def main():
             data = data.to(args.device)
             pred = model(data)
 
-            save_dir = os.path.join(BASE_PATH, "results")
+            save_dir = os.path.join("./gcnn", "results")
             if not os.path.exists(save_dir): os.makedirs(save_dir)
 
             # PV data
             pv_template_name = f"PV_samplefile.Netcdf"
-            pv_template_path = os.path.join(args.data_dir, "sample", pv_template_name)
+            pv_template_path = os.path.join(args.data_dir, "samples", pv_template_name)
             output_pv = os.path.join(save_dir, f"PV_pred_{args.target_id}.Netcdf")
 
             if os.path.exists(pv_template_path):
@@ -134,19 +134,6 @@ def main():
             else:
                 print(f"⚠️ No PV template({pv_template_name}). So storing .npy instead of .Netcdf")
                 np.save(output_pv.replace(".Netcdf", ".npy"), pred.cpu().numpy())
-
-            # Info data.
-            grid_template_name = f"Info_samplefile.Netcdf"
-            grid_template_path = os.path.join(args.data_dir, "sample", grid_template_name)
-            output_info = os.path.join(save_dir, f"Info_pred_{args.target_id}.Netcdf")
-
-            if os.path.exists(grid_template_path):
-                shutil.copy(grid_template_path, output_info)
-                print(f"💾 Info data: {output_info}")
-            else:
-                print(f"⚠️ No Info template({grid_template_name}). So storing .npy instead of .Netcdf")
-                print(f"   -> instead of .npy: {output_info.replace('.Netcdf', '.npy')}")
-                np.save(output_info.replace(".Netcdf", ".npy"), data.x.cpu().numpy())
 
 if __name__ == "__main__":
     main()
