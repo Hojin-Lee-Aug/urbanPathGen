@@ -35,6 +35,10 @@ Action Required: Move (or download) this PV file into the `data` directory to us
 
 **Note:** PV_samplefile.Netcdf(`gcnn/data_set/samples`) serves as a template container to hold the PV data for $Re=5000$, as described in the paper.
 
+Due to GitHub's file size limit, please download the `checkpoint_gcnn.pth.tar` files from the link below:
+And, 
+- **Download Link:** https://drive.google.com/file/d/1H7YnFwprmYOGRy0Y-uSAdo0MNmrJDQIL/view?usp=drive_link
+
 ### 1. Data Setup
 Place the downloaded NetCDF files into the `data/` directory. Ensure the filenames match exactly:
 * `data/Info.Netcdf` (Geometry info, this file exists already in data)
