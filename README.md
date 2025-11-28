@@ -33,7 +33,7 @@ This code is specifically configured for the **$Re=5000$** flow regime, correspo
 Upon execution, the predicted flow field file (e.g., PV_pred_914.Netcdf) will be generated in the `gcnn/results` directory.
 Action Required: Move (or download) this PV file into the `data` directory to use it for the path planning algorithm.
 
-**Note:**: PV_samplefile.Netcdf(`gcnn/data_set/samples`) serves as a template container to hold the PV data for $Re=5000$, as described in the paper.
+**Note:** PV_samplefile.Netcdf(`gcnn/data_set/samples`) serves as a template container to hold the PV data for $Re=5000$, as described in the paper.
 
 ### 1. Data Setup
 Place the downloaded NetCDF files into the `data/` directory. Ensure the filenames match exactly:
