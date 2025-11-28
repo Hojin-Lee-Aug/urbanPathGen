@@ -77,25 +77,28 @@ You can extract various values of **distance** and **work savings (%)** for $Re=
 
 ## 📂 Directory Structure
 
-├── data/                         
+├── data/                          # Input data directory for the path planning module
 │   ├── Info.Netcdf                # Grid and coordinate information file
-│   └── README.txt            
-├── gcnn/                         
-│   ├── data_set/                  
-│   │   ├── adjLists/              
-│   │   │   └── adjLst_914.hdf5    # Adjacency list
-│   │   ├── coords/                
+│   └── README.txt                 # Instructions regarding data files
+│
+├── gcnn/                          # Graph Convolutional Neural Network (GCNN) module
+│   ├── data_set/                  # Dataset directory for GCNN inference
+│   │   ├── adjLists/              # Graph connectivity data (Adjacency lists)
+│   │   │   └── adjLst_914.hdf5    # Adjacency list 
+│   │   ├── coords/                # Nodal coordinate data
 │   │   │   └── coord_914.hdf5     # Coordinates
-│   │   └── samples/               
+│   │   └── samples/               # Template files for file generation
 │   │       └── PV_samplefile.Netcdf # Template container for PV data
-│   └── results/                   
-│       └── README.txt           
-├── src/                           
-│   ├── __init__.py               
+│   └── results/                   # Directory where GCNN prediction results will be saved
+│       └── README.txt             # Information about output files
+│
+├── src/                           # Source code for the main path planning logic
+│   ├── __init__.py                # Package initialization file
 │   ├── environment.py             # Environment setup and boundary definitions
 │   ├── pathfinding.py             # Core pathfinding algorithms (e.g., Dijkstra)
-│   ├── physics.py                 # Physics calculations
+│   ├── physics.py                 # Physics calculations (Drag, Reynolds number, Energy)
 │   └── visualization.py           # Plotting and visualization tools
-├── .gitignore                   
-├── LICENSE                  
-└── README.md                    
+│
+├── .gitignore                    
+├── LICENSE
+└── README.md                  
